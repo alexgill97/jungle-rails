@@ -1,0 +1,35 @@
+<header class="page-header">
+  <h1>Signup</h1>
+</header>
+
+<div class="user-auth-form">
+
+  <%= form_for :user, url: '/users' do |f| %>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">
+        <span class="glyphicon glyphicon-user"></span>
+      </span>
+      <%= f.text_field :first_name, :placeholder => " First name", :class => "form-control" %>
+      <%= f.text_field :last_name, :placeholder => " Last name", :class => "form-control" %>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">
+        <span class="glyphicon glyphicon-envelope"></span>
+      </span>
+      <%= f.text_field :email, :placeholder => " Email address", :class => "form-control" %>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">
+        <span class="glyphicon glyphicon-lock"></span>
+      </span>
+      <%= f.password_field :password, :placeholder => " Password", :class => "form-control" %>
+      <%= f.password_field :password_confirmation, :placeholder => " Password confirmation", :class => "form-control" %>
+    </div>
+
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  <% end %>
+
+</div>
